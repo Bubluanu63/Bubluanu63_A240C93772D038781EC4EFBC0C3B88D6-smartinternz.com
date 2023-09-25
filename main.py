@@ -1,9 +1,14 @@
-def fact_rec(n):
-  if n==0 or n==1:
-    return 1
-  else:
-    return n*fact_rec(n-1)
+def linearSearchProduct (ProductList, TargetProduct):
+  indices = []
+  for index,Product in enumerate(ProductList): 
+    if Product == TargetProduct:
+     indices.append(index)
 
-number=2
-rec=fact_rec(number)
-print("The factorial of{} is{}.". format (number,rec))
+  return indices
+
+
+# Example usage:
+Products =["shoes", "boot", "loafer", "shoes", "sandal","shoes"]
+Target = "shoes"
+Result = linearSearchProduct(Products, Target)
+print(Result)
